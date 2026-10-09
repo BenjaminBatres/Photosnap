@@ -13,9 +13,7 @@
   --background-image-Gradient-5: linear-gradient(225deg, #F6C683 0%, #DE3838 100%);
   --background-image-Gradient-6: linear-gradient(53deg, #FFC593 0%, #BC7198 50%, #5A77FF 100%);
   --background-image-Gradient-7: radial-gradient(circle at bottom left, #FFC593 0%, #BC7198 50%, #5A77FF 100%);
-
 }
-
 
 body {
   font-family: var(--font-dm-sans);
