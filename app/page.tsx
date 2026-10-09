@@ -7,6 +7,7 @@ import BeautifulTablet from "./assets/home/tablet/beautiful-stories.jpg";
 import BeautifulMobile from "./assets/home/mobile/beautiful-stories.jpg";
 import SplitFeatureSection from "./components/sections/SplitFeatureSection";
 import StoriesSection from "./components/sections/StoriesSection";
+import FeaturesHighlights from "./components/sections/FeaturesHighlights";
 export default function Home() {
   const features = [
     {
@@ -41,6 +42,7 @@ export default function Home() {
         />
       ))}
       <StoriesSection />
+      <FeaturesHighlights />
     </>
   );
 }
