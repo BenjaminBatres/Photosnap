@@ -40,7 +40,8 @@ export default function StoriesSection() {
     <section>
       <div className="max-w-360 mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
         {stories.map((story, id) => (
-          <div key={id} className="relative">
+          <div key={id} className="relative group hover:-translate-y-6 duration-350">
+            <div className="absolute bottom-0 w-full h-2 bg-Gradient-7 z-10 opacity-0 group-hover:opacity-100 duration-350"/>
             <Image
               src={story.imageDesktop}
               loading="eager"
