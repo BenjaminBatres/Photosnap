@@ -18,7 +18,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <nav className="flex justify-between items-center max-w-360 mx-auto h-18 px-5">
+    <nav className="flex justify-between items-center max-w-360 mx-auto h-18 px-6">
       <Link href={"/"}>
         <Image
           src={Logo}
