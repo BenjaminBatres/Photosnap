@@ -34,7 +34,7 @@ export default function Menu({ links }: IProps) {
 
       {/* Overlay */}
       <div
-        className={`${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"} top-85 absolute inset-0 bg-black/50 z-55`}
+        className={`${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"} top-84 absolute inset-0 bg-black/50 z-55`}
       />
       {/* Menu */}
       <div
