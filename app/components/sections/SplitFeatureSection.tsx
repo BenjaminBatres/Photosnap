@@ -23,7 +23,7 @@ export default function SplitFeatureSection({
         className={`max-w-360 mx-auto flex flex-col ${positionLeft ? "flex-col-reverse sm:flex-row-reverse" : "flex-col-reverse sm:flex-row"}`}
       >
         <div
-          className={`flex flex-col justify-center gap-6 sm:gap-12 px-6 sm:px-15 py-25 lg:py-0 lg:px-20 w-[70%] lg:w-[45%]`}
+          className={`flex flex-col justify-center gap-6 sm:gap-12 px-6 sm:px-15 py-25 lg:py-0 lg:px-20 sm:w-[70%] lg:w-[45%]`}
         >
           <div className="space-y-4 sm:space-y-5">
             <h2 className="text-[32px] sm:text-[40px] leading-[125%] sm:leading-12 uppercase font-bold tracking-[3.5px] sm:tracking-[4.17px] max-w-70  sm:max-w-85">
