@@ -2,7 +2,7 @@
 import Image from "next/image";
 import MenuIcon from "../assets/shared/mobile/menu.svg";
 import CloseIcon from "../assets/shared/mobile/close.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 interface Links {
@@ -14,6 +14,15 @@ interface IProps {
 }
 export default function Menu({ links }: IProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
+
   return (
     <div className="sm:hidden">
       {isOpen ? (
