@@ -59,7 +59,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col items-end gap-8 justify-between">
+          <div className="flex flex-col items-center sm:items-end gap-8 justify-between">
             <div className="flex justify-between items-center gap-2.5">
               <span className="text-white text-xs uppercase font-bold tracking-[2px]">
                 Get an invite
