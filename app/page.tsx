@@ -8,6 +8,7 @@ import BeautifulMobile from "./assets/home/mobile/beautiful-stories.jpg";
 import SplitFeatureSection from "./components/sections/SplitFeatureSection";
 import StoriesSection from "./components/sections/StoriesSection";
 import FeaturesHighlights from "./components/sections/FeaturesHighlights";
+import stories from "./data/stories";
 export default function Home() {
   const features = [
     {
@@ -41,7 +42,7 @@ export default function Home() {
           positionLeft={feat.positionLeft}
         />
       ))}
-      <StoriesSection />
+      <StoriesSection stories={stories} limit={4} className="sm:grid-cols-2 lg:grid-cols-4"/>
       <FeaturesHighlights />
     </>
   );
