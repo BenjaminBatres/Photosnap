@@ -22,6 +22,7 @@ export default function StoriesSection({ stories, limit }: TProps) {
             author={story.author}
             image={story.imageDesktop}
             title={story.title}
+            date={story.date}
           />
         ))}
       </div>
