@@ -35,7 +35,7 @@ export default function Footer() {
   ];
   return (
     <footer className="py-14 sm:py-20 px-6 bg-black">
-      <div className="max-w-360 mx-auto">
+      <div className="max-w-277.5 mx-auto">
         <div className="h-107.5 sm:h-full flex flex-col justify-between sm:flex-row">
           <div className="flex flex-col items-center sm:items-start">
             <Image src={Logo} alt="logo" className="invert-100 mb-8" />
@@ -59,7 +59,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col items-center gap-8 justify-between">
+          <div className="flex flex-col items-end gap-8 justify-between">
             <div className="flex justify-between items-center gap-2.5">
               <span className="text-white text-xs uppercase font-bold tracking-[2px]">
                 Get an invite

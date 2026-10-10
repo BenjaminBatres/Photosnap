@@ -19,7 +19,7 @@ export default function Navbar() {
   ];
   return (
     <header className="px-6">
-      <nav className="flex justify-between items-center max-w-360 mx-auto h-18">
+      <nav className="flex justify-between items-center max-w-277.5 mx-auto h-18">
         <Link href={"/"}>
           <Image
             src={Logo}
