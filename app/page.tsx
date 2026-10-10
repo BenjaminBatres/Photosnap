@@ -42,7 +42,7 @@ export default function Home() {
           positionLeft={feat.positionLeft}
         />
       ))}
-      <StoriesSection stories={stories} limit={4} className="sm:grid-cols-2 lg:grid-cols-4"/>
+      <StoriesSection stories={stories} limit={4} />
       <FeaturesHighlights />
     </>
   );

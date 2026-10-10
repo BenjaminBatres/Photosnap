@@ -8,15 +8,14 @@ interface TStories {
   date: string;
 }
 interface TProps {
-  className: string;
-  limit: number;
+  limit?: number;
   stories: TStories[];
 }
-export default function StoriesSection({ className, stories, limit }: TProps) {
+export default function StoriesSection({ stories, limit }: TProps) {
   const displayedStories = limit ? stories.slice(0, limit) : stories;
   return (
     <section>
-      <div className={`max-w-360 mx-auto grid ${className}`}>
+      <div className="max-w-360 mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
         {displayedStories.map((story) => (
           <Stories
             key={story.title}
