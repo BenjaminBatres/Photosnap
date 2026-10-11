@@ -27,7 +27,7 @@ export default function CTASection() {
           <h2 className="text-white uppercase text-[32px] leading-[125%] sm:text-[40px]/12 font-bold max-w-90">
             We're in beta. Get your invite today!
           </h2>
-          <div className="flex justify-between items-center gap-4">
+          <div className="flex items-center gap-4">
             <span className="text-white text-xs uppercase font-bold tracking-[2px]">
               Get an invite
             </span>
