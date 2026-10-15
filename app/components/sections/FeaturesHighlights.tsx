@@ -1,4 +1,5 @@
 import Image from "next/image";
+import * as motion from "motion/react-client";
 interface IHighlights {
   icon: string;
   title: string;
@@ -14,7 +15,14 @@ export default function FeaturesHighlights({ limit, highlights }: IProps) {
     <section className="py-25 sm:py-30 lg:py-35 px-6">
       <div className="max-w-277.5 mx-auto grid lg:grid-cols-3 items-center gap-20 lg:gap-y-40 lg:gap-x-7.5">
         {displayHighlights.map((highlight, id) => (
-          <div key={id} className="flex h-full flex-col items-center gap-10">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: id * 0.15, duration: 0.5 }}
+            key={id}
+            className="flex h-full flex-col items-center gap-10"
+          >
             <div className="flex h-20 items-center justify-center">
               <Image src={highlight.icon} alt="" />
             </div>
@@ -28,7 +36,7 @@ export default function FeaturesHighlights({ limit, highlights }: IProps) {
                 {highlight.desc}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-
+import * as motion from "motion/react-client";
 interface TProps {
   imageDesktop: StaticImageData;
   imageTablet: StaticImageData;
@@ -24,15 +24,33 @@ export default function SecondaryHeroSection({
           <div className="relative space-y-5">
             {/* Gradient bar */}
             <div className="h-full w-1.5 bg-Gradient-6 absolute hidden sm:block -left-10 md:-left-20 2xl:-left-30" />
-            <h2 className="text-[32px] leading-[125%] sm:text-[40px]/12 font-bold text-white uppercase tracking-[4.17px]">
+            <motion.h2
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="text-[32px] leading-[125%] sm:text-[40px]/12 font-bold text-white uppercase tracking-[4.17px]"
+            >
               {title}
-            </h2>
-            <p className="text-white/60 text-[15px] leading-[165%] max-w-sm">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="text-white/60 text-[15px] leading-[165%] max-w-sm"
+            >
               {desc}
-            </p>
+            </motion.p>
           </div>
         </div>
-        <div className="sm:h-122.5">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="sm:h-122.5"
+        >
           <Image
             src={imageDesktop}
             alt=""
@@ -48,7 +66,7 @@ export default function SecondaryHeroSection({
             alt=""
             className="w-full h-full  sm:hidden object-cover"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

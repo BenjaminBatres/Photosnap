@@ -16,8 +16,9 @@ export default function StoriesSection({ stories, limit }: TProps) {
   return (
     <section>
       <div className="max-w-360 mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
-        {displayedStories.map((story) => (
+        {displayedStories.map((story, id) => (
           <Stories
+            id={id}
             key={story.title}
             author={story.author}
             image={story.imageDesktop}

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import CheckIcon from "../../assets/pricing/desktop/check.svg";
-
+import * as motion from "motion/react-client";
 export default function CompareSection() {
   const featureTitles = ["Basic", "Pro", "Business"];
   const features = [
@@ -41,10 +41,22 @@ export default function CompareSection() {
     <section className="sm:pt-20 pb-20 sm:pb-30 px-6">
       <div className="max-w-182.75 mx-auto">
         <div className="space-y-14">
-          <h2 className="hidden sm:block text-center text-[40px]/12 font-bold uppercase">
+          <motion.h2
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="hidden sm:block text-center text-[40px]/12 font-bold uppercase"
+          >
             Compare
-          </h2>
-          <div className="grid grid-cols-2 justify-between sm:px-6 pb-6 border-b">
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="grid grid-cols-2 justify-between sm:px-6 pb-6 border-b"
+          >
             <div>
               <p className="uppercase text-xs font-bold tracking-[2px]">
                 The features
@@ -60,10 +72,14 @@ export default function CompareSection() {
                 </p>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
         {features.map((feat, id) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: id * 0.15, duration: 0.5 }}
             key={id}
             className="grid sm:grid-cols-2 py-6 sm:p-6 border-b border-Neutral-300 gap-y-4"
           >
@@ -102,7 +118,7 @@ export default function CompareSection() {
                 />
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

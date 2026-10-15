@@ -3,6 +3,7 @@ import CTAImgDesktop from "../../assets/shared/desktop/bg-beta.jpg";
 import CTAImgTablet from "../../assets/shared/tablet/bg-beta.jpg";
 import CTAImgMobileMobile from "../../assets/shared/mobile/bg-beta.jpg";
 import Arrow from "../../assets/shared/desktop/arrow.svg";
+import * as motion from "motion/react-client";
 export default function CTASection() {
   return (
     <section>
@@ -23,7 +24,13 @@ export default function CTASection() {
           alt=""
           className="sm:hidden w-full h-70 object-cover"
         />
-        <div className="absolute top-1/4 2xl:left-[11%] flex flex-col sm:flex-row gap-y-6 justify-between max-w-277.5 mx-auto w-full  px-6 lg:pl-20 2xl:pl-0 lg:pr-20">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="absolute top-1/4 2xl:left-[11%] flex flex-col sm:flex-row gap-y-6 justify-between max-w-277.5 mx-auto w-full  px-6 lg:pl-20 2xl:pl-0 lg:pr-20"
+        >
           <h2 className="text-white uppercase text-[32px] leading-[125%] sm:text-[40px]/12 font-bold max-w-90">
             We're in beta. Get your invite today!
           </h2>
@@ -33,7 +40,7 @@ export default function CTASection() {
             </span>
             <Image src={Arrow} alt="" className="invert-100" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

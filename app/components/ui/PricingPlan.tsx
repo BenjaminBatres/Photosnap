@@ -1,4 +1,4 @@
-import React from "react";
+import * as motion from "motion/react-client";
 interface IPlan {
   id: number;
   title: string;
@@ -7,7 +7,13 @@ interface IPlan {
 }
 export default function PricingPlan({ title, desc, price, id }: IPlan) {
   return (
-    <div className="bg-neutral-100 even:bg-black nth-[2]:lg:h-110 flex flex-col sm:flex-row lg:flex-col items-center sm:items-start lg:items-center py-15 sm:py-10 even:py-15 px-10 lg:px-9 gap-10 relative">
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: id * 0.15, duration: 0.5 }}
+      className="bg-neutral-100 even:bg-black nth-[2]:lg:h-110 flex flex-col sm:flex-row lg:flex-col items-center sm:items-start lg:items-center py-15 sm:py-10 even:py-15 px-10 lg:px-9 gap-10 relative"
+    >
       {id === 1 && (
         <div className="absolute h-1.5 w-full sm:h-full sm:w-1.5 left-0 lg:w-full lg:h-1.5 bg-Gradient-6 top-0" />
       )}
@@ -45,6 +51,6 @@ export default function PricingPlan({ title, desc, price, id }: IPlan) {
       >
         Pick Plan
       </div>
-    </div>
+    </motion.div>
   );
 }
