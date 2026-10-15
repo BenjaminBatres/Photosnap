@@ -43,11 +43,11 @@ export default function Menu({ links }: IProps) {
 
       {/* Overlay */}
       <div
-        className={`${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"} top-84 absolute inset-0 bg-black/50 z-55`}
+        className={`${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"} top-83 fixed inset-0 bg-black/50 z-55 duration-350`}
       />
       {/* Menu */}
       <div
-        className={`${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"} absolute left-0 w-full top-18 py-8 px-5 space-y-5 z-50 bg-white`}
+        className={`${isOpen ? "opacity-100 translate-y-0" : "-translate-y-full opacity-0 pointer-events-none"} absolute left-0 w-full top-18 py-8 px-5 space-y-5 z-60 bg-white duration-350`}
       >
         <ul className="flex flex-col items-center gap-5 pb-5 border-b border-black/25">
           {links.map((link, id) => (
